@@ -41,8 +41,8 @@
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <knockout.version>2.2.0</knockout.version>
-        <downloadUrl>https://github.com/downloads/SteveSanderson/knockout</downloadUrl>
+        <knockout.version>2.2.1</knockout.version>
+        <downloadUrl>http://knockoutjs.com/downloads</downloadUrl>
         <destinationDir>${project.build.outputDirectory}/META-INF/resources/webjars/${project.artifactId}/${knockout.version}</destinationDir>
     </properties>
 
@@ -60,7 +60,7 @@
                         <configuration>
                             <url>${downloadUrl}</url>
                             <fromFile>knockout-${knockout.version}.js</fromFile>
-                            <toDir>${destinationDir}</toDir>
+                            <toFile>${destinationDir}/knockout.js</toFile>
                         </configuration>
                     </execution>
                     <execution>
@@ -70,7 +70,7 @@
                         <configuration>
                             <url>${downloadUrl}</url>
                             <fromFile>knockout-${knockout.version}.debug.js</fromFile>
-                            <toDir>${destinationDir}</toDir>
+                            <toFile>${destinationDir}/knockout.debug.js</toFile>
                         </configuration>
                     </execution>
                 </executions>
@@ -82,35 +82,5 @@
             </plugin>
         </plugins>
     </build>
-
-    <profiles>
-        <profile>
-            <id>release-sign-artifacts</id>
-            <activation>
-                <activeByDefault>false</activeByDefault>
-                <property>
-                    <name>performRelease</name>
-                    <value>true</value>
-                </property>
-            </activation>
-            <build>
-                <plugins>
-                    <plugin>
-                        <artifactId>maven-gpg-plugin</artifactId>
-                        <version>1.2</version>
-                        <executions>
-                            <execution>
-                                <id>sign-artifacts</id>
-                                <phase>verify</phase>
-                                <goals>
-                                    <goal>sign</goal>
-                                </goals>
-                            </execution>
-                        </executions>
-                    </plugin>
-                </plugins>
-            </build>
-        </profile>
-    </profiles>
 
 </project>
