@@ -11,7 +11,7 @@
     <packaging>jar</packaging>
     <groupId>org.webjars</groupId>
     <artifactId>knockout</artifactId>
-    <version>3.1.1-SNAPSHOT</version>
+    <version>3.2.0-SNAPSHOT</version>
     <name>knockout</name>
     <description>WebJar for Knockout</description>
     <url>http://webjars.org</url>
@@ -41,8 +41,8 @@
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <knockout.version>3.1.0</knockout.version>
-        <downloadUrl>http://knockoutjs.com/downloads</downloadUrl>
+        <knockout.version>3.2.0</knockout.version>
+        <downloadUrl>https://github.com/knockout/knockout/releases/download/v${knockout.version}</downloadUrl>
         <destinationDir>${project.build.outputDirectory}/META-INF/resources/webjars/${project.artifactId}/${knockout.version}</destinationDir>
     </properties>
 
@@ -64,7 +64,7 @@
                         </configuration>
                     </execution>
                     <execution>
-                        <id>download-min-js</id>
+                        <id>download-debug-js</id>
                         <phase>process-resources</phase>
                         <goals><goal>download-single</goal></goals>
                         <configuration>
