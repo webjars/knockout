@@ -1,3 +1,3 @@
 requirejs.config({
-    paths: { "knockout": webjars.path("knockout", "js/knockout") }
+    paths: { "knockout": webjars.path("knockout", "knockout") }
 });

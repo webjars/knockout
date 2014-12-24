@@ -11,7 +11,7 @@
     <packaging>jar</packaging>
     <groupId>org.webjars</groupId>
     <artifactId>knockout</artifactId>
-    <version>3.2.1-SNAPSHOT</version>
+    <version>3.2.0-1-SNAPSHOT</version>
     <name>knockout</name>
     <description>WebJar for Knockout</description>
     <url>http://webjars.org</url>
@@ -46,8 +46,7 @@
         <destinationDir>${project.build.outputDirectory}/META-INF/resources/webjars/${project.artifactId}/${knockout.version}</destinationDir>
         <requirejs>
             {
-                "paths": { "knockout": "dist/knockout" },
-                "shim":{}
+                "paths": { "knockout": "knockout" }
             }
         </requirejs>
     </properties>
