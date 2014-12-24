@@ -43,7 +43,7 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <knockout.version>3.2.0</knockout.version>
         <downloadUrl>https://github.com/knockout/knockout/releases/download/v${knockout.version}</downloadUrl>
-        <destinationDir>${project.build.outputDirectory}/META-INF/resources/webjars/${project.artifactId}/${knockout.version}</destinationDir>
+        <destinationDir>${project.build.outputDirectory}/META-INF/resources/webjars/${project.artifactId}/${project.version}</destinationDir>
         <requirejs>
             {
                 "paths": { "knockout": "knockout" }
