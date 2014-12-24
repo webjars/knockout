@@ -44,6 +44,12 @@
         <knockout.version>3.2.0</knockout.version>
         <downloadUrl>https://github.com/knockout/knockout/releases/download/v${knockout.version}</downloadUrl>
         <destinationDir>${project.build.outputDirectory}/META-INF/resources/webjars/${project.artifactId}/${knockout.version}</destinationDir>
+        <requirejs>
+            {
+                "paths": { "knockout": "dist/knockout" },
+                "shim":{}
+            }
+        </requirejs>
     </properties>
 
     <build>
@@ -92,6 +98,12 @@
                 </configuration>
             </plugin>
         </plugins>
+        <resources>
+            <resource>
+                <directory>${project.basedir}/src/main/resources</directory>
+                <targetPath>${destinationDir}</targetPath>
+            </resource>
+        </resources>
     </build>
 
 </project>
