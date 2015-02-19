@@ -11,7 +11,7 @@
     <packaging>jar</packaging>
     <groupId>org.webjars</groupId>
     <artifactId>knockout</artifactId>
-    <version>3.2.0-2-SNAPSHOT</version>
+    <version>3.3.0-SNAPSHOT</version>
     <name>knockout</name>
     <description>WebJar for Knockout</description>
     <url>http://webjars.org</url>
@@ -41,7 +41,7 @@
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <knockout.version>3.2.0</knockout.version>
+        <knockout.version>3.3.0</knockout.version>
         <downloadUrl>https://github.com/knockout/knockout/releases/download/v${knockout.version}</downloadUrl>
         <destinationDir>${project.build.outputDirectory}/META-INF/resources/webjars/${project.artifactId}/${project.version}</destinationDir>
         <requirejs>
